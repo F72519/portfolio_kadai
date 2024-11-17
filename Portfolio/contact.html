@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Watashi Portfolio【SAKURACHAI WebDesign】</title>
+  <meta charset="utf-8">
+  <meta name="Watashi Portfolio" content="WatashiのPortfolioサイト（SAKURACHAI WebDesign）">
+
+  <!-- 表示領域の設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 互換を標準モードへ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css_destyle -->
+  <link rel="stylesheet" href="./destyle.css">
+  <!-- flick用 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon --> 
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Portfolio">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Contactのみ背景色設定 -->
+  <style>
+    body{background-color: #d3b498;}
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+    <!-- ロゴ -->
+    <a href="index.html">
+      <img class="logo-pc-img" src="images/logo.png" alt="トップページへ戻る">
+    </a>
+    
+    <!-- PC用ナビゲーション -->
+    <nav id="nav-pc">
+      <ul>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="index.html#main-contents-section-works">Works</a></li>
+        <li><a href="index.html#main-contents-section-skill">Skill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- スマホ用ヘッダー -->
+    <div id="header-sp">
+      <button id="burgerbutton-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="images/burger_sp.png">
+      </button>
+    </div>
+
+    <!-- スマホ用ナビゲーション/ハンバーガー -->
+    <div id="nav-sp">
+      <button id="burgerclose-sp" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <img src="images/burgerclose_sp.png">
+      </button>
+      <nav>
+        <ul>
+          <li>
+            <a id="burgerlogo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="images/burgerlogo_sp.png"></a>
+          </li>
+          <li><a class="menu" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">About me</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-works" onclick="document.getElementById('nav-sp').style.display = 'none'">Works</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-skill" onclick="document.getElementById('nav-sp').style.display = 'none'">Skill</a></li>
+          <li><a class="menu" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  
+  <main>
+    <!-- Contact -->
+    <section id="contact-section">
+      <div class="title">
+        <img class="contact-topimg" src="images/contact_title.png">
+      </div>
+
+      <!-- お問い合わせフォーム -->
+      <form action="#" method="post">
+
+        <!-- 会社名/団体名 -->
+        <div class="company">
+          <div class="contact-heading">
+            <label class="contact-label">会社名/団体名</label>
+          </div>
+          <div>
+            <input type="text" name="companyname" placeholder="例）◯◯株式会社" class="contact-textbox">
+          </div>
+        </div>
+
+        <!-- 名前 -->
+        <div class="fullname">
+          <div class="contact-heading">
+            <label class="contact-label">お名前<span class="contact-span">＊</span></label>
+          </div>
+          <div>
+            <input type="text" name="name" placeholder="例）高橋　太郎" class="contact-textbox">
+          </div>
+        </div>
+
+        <!-- フリガナ -->
+        <div class="furigana">
+          <div class="contact-heading">
+            <label class="contact-label">フリガナ<span class="contact-span">＊</span></label>
+          </div>
+          <div>
+            <input type="text" name="furigana" placeholder="例）タカハシ　タロウ" class="contact-textbox">
+          </div>
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="emailaddress">
+          <div class="contact-heading">
+            <label class="contact-label">メールアドレス<span class="contact-span">＊</span></label>
+          </div>
+          <div>
+            <input type="text" name="email" placeholder="例）info@example.com" class="contact-textbox">
+          </div>
+        </div>
+
+        <!-- 電話番号 -->
+        <div class="telephonenumber">
+          <div class="contact-heading">
+            <label class="contact-label">電話番号</label>
+          </div>
+          <div>
+            <input type="text" name="tel" placeholder="例）090-0123-4567" class="contact-textbox">
+          </div>
+        </div>
+
+        <!-- 問い合わせ内容 -->
+        <div class="inquirydetails">
+          <div class="contact-heading">
+            <label class="contact-label">お問い合わせ内容<span class="contact-span">＊</span></label>
+          </div>
+          <div>
+            <textarea class="contact-textarea" placeholder="" name="message"></textarea>
+          </div>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="contact-input">
+          <input type="image" src="images/button_send.png" alt="送信する">
+        </div>
+      </form>
+    </section>
+  </main>
+
+
+  <footer>
+    <!-- コンタクト用コピーライト -->
+    <section id="copyright-contact-section">
+      <p class="copyright">&copy;2024 SAKURACHAI WebDesign All Rights reserved.</p>
+    </section>
+  </footer>
+
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

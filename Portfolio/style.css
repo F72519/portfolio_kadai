@@ -1,0 +1,1458 @@
+/* PC、スマホ共通スタイル */
+body {
+  margin: 0 auto 0 auto;
+  font-family: "ccfont", sans-serif;
+  background-color: #F2E9E1;
+  color: #663012;
+  padding-top: 80px
+}
+@font-face {
+  font-family: "ccfont";
+  src: url("./fonts/kinemarub.ttf") format("truetype");
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #F2E9E1;
+  opacity: 0.8;
+  z-index: 1000;
+}
+
+/* スマホ用ナビを非表示 */
+#header-sp, #nav-sp {
+  display: none;
+}
+
+/* ナビゲーションのロゴ */
+.logo-pc-img {
+  height: 70px;
+  margin: 6px 0 4px 20px;
+}
+
+/* ナビゲーションのレイアウト */
+#nav-pc ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  white-space: nowrap;
+}
+#nav-pc li {
+  list-style: none;
+  margin: 28px;
+}
+
+/* ナビゲーションのリンク装飾 */
+#nav-pc a {
+  text-decoration: none;
+  position: relative;
+}
+#nav-pc a:hover {
+  color: #C29545;
+}
+#nav-pc a::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #C29545;
+  bottom: -5px;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+#nav-pc a:hover::after {
+  transform: scale(1, 1);
+  transform-origin: left top;
+}
+
+/*============
+ index.html
+============*/
+/* メインビジュアル */
+/* 背景 */
+div.main-visual {
+  position: relative;
+  clip-path: inset(0 0 0 0);
+  width: 100%;
+  height: 1300px;
+}
+div.main-visual-img {
+  position: fixed;
+  padding-top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/top_img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* タイトル★ */
+/* .title-right {
+  position: absolute;
+  text-align: right;
+  top: 120px;
+  right: 0;
+  z-index: 100;
+} */
+/* .title-right > .title-right-img {
+  width: 50%;
+} */
+
+/* コンセプト */
+/* レイアウトとサイズ調整 */
+.top-concept {
+  position: absolute;
+  top: 160px;
+  z-index: 100;
+}
+.concept-frame {
+  position: relative;
+  left: 10.0vw;
+}
+.concept-frame > .concept-img {
+  width: 30.0vw;
+}
+
+/* テキスト設定★ */
+/* .concept-frame > h1 {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.4vw;
+  line-height: 150%;
+  font-weight: bold;
+}
+.concept-frame > p {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.3vw;
+  line-height: 150%;
+} */
+
+/* 装飾右 */
+.parts-right {
+  position: absolute;
+  text-align: right;
+  right: 20.0vw;
+  top: 230px;
+}
+.parts-right > .parts-right-img {
+  width: 30%;
+}
+
+/* 装飾左 */
+.parts-left {
+  position: absolute;
+  text-align: left;
+  left: 3.0vw;
+  top: 550px;
+}
+.parts-left > .parts-left-img {
+  width: 25%;
+}
+
+/* About cup */
+/* レイアウトとサイズ調整 */
+.top-about {
+  z-index: 100;
+}
+.about-cup-img {
+  position: absolute;
+  top: 32%;
+  right: 3.0vw;
+  width: 30.0vw;
+}
+
+/* pot */
+/* レイアウトとサイズ調整 */
+.top-pot {
+  position: absolute;
+  top: 65%;
+  z-index: 100;
+}
+.pot-frame {
+  position: relative;
+  left: 37.0vw;
+}
+.pot-frame > .pot-img {
+  width: 33.0vw;
+}
+
+/* 回転画像 */
+.pot-circle-img {
+  position: absolute;
+  width: 68%;
+  top: 11.8%;
+  left: 15.2%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pot-circle-img {
+  animation: rotate 60s infinite linear;
+}
+
+
+/* 波★ */
+/* .top-wave { */
+  /* position: fixed; */
+  /* width: 100vw; */
+/* }
+.top-wave-image {
+  top: -300px;
+} */
+
+
+/* メインコンテンツ */
+/* 各タイトルの共通書式・レイアウト */
+.title-index {
+  text-align: center;
+}
+.title-index h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 10px;
+}
+.title-index p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.title-index-img {
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+/* Works_カルーセル */
+/* 全体のレイアウト */
+.works-carousel-img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* テキスト設定 */
+.works-carousel1, .works-carousel2, .works-carousel3 {
+  position: relative;
+}
+.works-carousel1 > p, .works-carousel2 > p, .works-carousel3 > p {
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  font-size: 1.3vw;
+  line-height: 150%;
+}
+.works-carousel1 > h1, .works-carousel2 > h1, .works-carousel3 > h1 {
+  position: absolute;
+  top: 86%;
+  left: 20%;
+  font-size: 1.3vw;
+  line-height: 150%;
+  font-weight: bold;
+}
+
+/* Moreボタン★ */
+/* .works-more {
+  text-align: center;
+  padding: 50px 0 100px 0;
+}
+.works-button-img {
+  width: 150px;
+} */
+
+/* Skill */
+/* 全体のレイアウト */
+#content-skill {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 28.0vw);
+  gap: 0 3vw;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.skill-frame-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* テキスト設定 */
+.skill-frame1, .skill-frame2, .skill-frame3 {
+  position: relative;
+}
+.skill-frame1 > h1, .skill-frame2 > h1, .skill-frame3 > h1 {
+  position: absolute;
+  text-align: center;
+  width: 15.5vw;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.6vw;
+  line-height: 150%;
+  font-weight: bold;
+}
+.skill-frame1 > p, .skill-frame2 > p, .skill-frame3 > p {
+  position: absolute;
+  text-align: center;
+  width: 19vw;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.4vw;
+  line-height: 170%;
+}
+
+
+/*============
+ about.html
+============*/
+/* タイトル */
+.title-left {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.title-left > .title-left-img {
+  width: 25%;
+}
+
+/* About me 背景 */
+#about-section {
+  position: relative;
+}
+.about-back-img-pc {
+  width: 75%;
+  margin: auto;
+  display: block;
+}
+
+/* スマホ用背景を非表示 */
+.about-back-img-sp {
+  display: none;
+}
+
+/* About me アイコン */
+.about-icon-img {
+  position: absolute;
+  width: 16%;
+  top: 12%;
+  left: 18%;
+}
+
+/* About me テキスト */
+.about-text {
+  position: absolute;
+  width: 42%;
+  top: 16%;
+  left: 39%;
+}
+.about-text-watashi > h1 {
+  font-size: 2.0vw;
+  font-weight: bold;
+}
+.about-text-watashi > p {
+  font-size: 1.4vw;
+  line-height: 150%;
+}
+.br-pc {
+  display: block;
+}
+.about-span {
+  font-size: 1.6vw;
+  font-weight: bold;
+  text-decoration: underline #F7CCC3;
+  line-height: 160%;
+}
+
+/* About me ツールイメージ */
+.about-tool {
+  width: 100%;
+  margin-top: -14px;
+}
+.about-tool-img {
+  width: 2.0vw;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+/* Career */
+/* 背景 */
+.career-frame-img {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.career-frame {
+  position: relative;
+  padding-bottom: 150px;
+  margin-top: 150px;
+}
+
+/* アイテム全体のレイアウト */
+.career-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 75%;
+  background-color: #d3b498;
+  padding-bottom: 30px;
+  margin: 20% auto 0 auto;
+}
+.career-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.career-main ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 18.0vw);
+  gap: 0px 40px;
+}
+.career-main li {
+  list-style: none;
+}
+
+/* アイテムhover時のテキスト共通設定 */
+.career-text h1 {
+  padding: 10px 10px 0.5vw 10px;
+  font-size: 1.6vw;
+	color: #F2E9E1;
+}
+.career-text p {
+  padding: 0.8vw 10px 10px 10px;
+  font-size: 1.4vw;
+  line-height: 150%;
+	color: #F2E9E1;
+}
+
+/* 各アイテムのレイアウトと設定 */
+/* 1 */
+.career-item1 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item1 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item1:hover .career-hover {
+  top: 0;
+}
+
+/* 2 */
+.career-item2 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item2 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item2:hover .career-hover {
+  top: 0;
+}
+
+/* 3 */
+.career-item3 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item3 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item3:hover .career-hover {
+  top: 0;
+}
+
+/* 4 */
+.career-item4 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item4 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item4:hover .career-hover {
+  top: 0;
+}
+
+/* 5 */
+.career-item5 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item5 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item5:hover .career-hover {
+  top: 0;
+}
+
+/* 6 */
+.career-item6 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item6 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item6:hover .career-hover {
+  top: 0;
+}
+
+/* 7 */
+.career-item7 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.career-item7 .career-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.career-item7:hover .career-hover {
+  top: 0;
+}
+
+/* 8 */
+.career-item8 {
+  width: 100%;
+  padding-top: 15%;
+	margin: 15px 0px 0px 20px;
+}
+
+/* 9 */
+.career-item9 {
+  width: 100%;
+  padding-top: 15%;
+	margin: 15px 25px 0px 0px;
+}
+
+
+/* Favorite */
+/* 背景 */
+.favorite-frame-img {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.favorite-frame {
+  position: relative;
+  margin-top: 150px;
+  padding-bottom: 130px;
+}
+
+/* アイテム全体のレイアウト */
+.favorite-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 75%;
+  background-color: #d3b498;
+  padding-bottom: 30px;
+  margin: 20% auto 0 auto;
+}
+.favorite-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.favorite-main ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 18.0vw);
+  gap: 0px 40px;
+}
+.favorite-main li {
+  list-style: none;
+}
+
+/* アイテムhover時のテキスト共通設定 */
+.favorite-text h1 {
+  padding: 10px 10px 0.5vw 10px;
+  font-size: 1.6vw;
+	color: #F2E9E1;
+}
+.favorite-text p {
+  padding: 0.8vw 10px 10px 10px;
+  font-size: 1.4vw;
+  line-height: 150%;
+	color: #F2E9E1;
+}
+
+/* 各アイテムのレイアウトと設定 */
+/* 1 */
+.favorite-item1 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item1 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item1:hover .favorite-hover {
+  top: 0;
+}
+
+/* 2 */
+.favorite-item2 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item2 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item2:hover .favorite-hover {
+  top: 0;
+}
+
+/* 3 */
+.favorite-item3 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item3 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item3:hover .favorite-hover {
+  top: 0;
+}
+
+/* 4 */
+.favorite-item4 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item4 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item4:hover .favorite-hover {
+  top: 0;
+}
+
+/* 5 */
+.favorite-item5 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item5 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item5:hover .favorite-hover {
+  top: 0;
+}
+
+/* 6 */
+.favorite-item6 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item6 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item6:hover .favorite-hover {
+  top: 0;
+}
+
+/* 7 */
+.favorite-item7 {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.favorite-item7 .favorite-hover {
+  position: absolute;
+  width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	background-color:	rgba(102,48,18,0.8);
+	transition: all 0.5s ease;
+}
+.favorite-item7:hover .favorite-hover {
+  top: 0;
+}
+
+/* 8 */
+.favorite-item8 {
+  width: 100%;
+  padding-top: 15%;
+	margin: 15px 0px 0px 20px;
+}
+
+/* 9 */
+.favorite-item9 {
+  width: 100%;
+  padding-top: 15%;
+	margin: 15px 25px 0px 0px;
+}
+
+
+/*============
+ works.html★
+============*/
+/* 全体のレイアウト */
+#works-section {
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.works-box {
+  display: flex;
+}
+.works-box + .works-box {
+  margin-top: 200px;
+}
+
+/* テキストのレイアウトと設定 */
+.works-text {
+  width: 70%;
+  padding: 50px;
+}
+.works-text h1 {
+  font-size: 20px;
+  padding-bottom: 30px;
+  line-height: 150%;
+}
+.works-text h2 {
+  font-size: 18px;
+  padding-bottom: 5px;
+  line-height: 150%;
+}
+.works-text p {
+  font-size: 16px;
+  padding-bottom: 20px;
+  line-height: 150%;
+}
+
+/* 画像のレイアウト */
+.works-img1, .works-img2, .works-img3 {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 偶数の項目は画像とテキストの位置を入れ替え */
+.works-box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+/*============
+ contact.html
+============*/
+/* タイトル */
+.title {
+  text-align: center;
+  margin: 40px 0 30px 25px;
+}
+.contact-topimg {
+  width: 180px; 
+}
+
+/* フォーム全体のレイアウト */
+form {
+  width: 90%;
+  padding: 50px 50px 0px 50px;
+  margin: 0 auto 0 auto;
+  background-color: #F2E9E1;
+}
+#contact-section {
+  bottom: 0;
+}
+.company, .fullname, .furigana, .emailaddress, .telephonenumber, .inquirydetails {
+  display: flex;
+  border-bottom-width: 1px;
+  border-bottom-color: #d3b498;
+  border-style: solid;
+}
+
+/* 問い合わせ項目 */
+.contact-heading {
+  width: 350px;
+  align-self: center;
+  white-space: nowrap;
+}
+.contact-label {
+  font-weight: bold;
+}
+
+/* 必須マーク */
+.contact-span {
+  margin: 0;
+  font-weight: bold;
+  color: #e63f8f;
+  vertical-align: super;
+}
+
+/* 会社名〜電話番号のテキストボックス */
+.contact-textbox {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  width: 500px;
+  max-width: 100%;
+  height: 60px;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #C29545;
+ }
+
+/* お問い合わせ内容のテキストエリア */
+.contact-textarea {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  width: 500px;
+  max-width: 100%;
+  height: 200px;
+}
+
+/* 送信ボタン */
+.contact-input {
+  text-align: center;
+}
+.contact-input > input {
+  width: 160px;
+  margin: 60px 0 30px 20px;
+}
+
+/* contact用フッター/コピーライト */
+#copyright-contact-section {
+  position: fixed;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  bottom: 0;
+  background: #d3b498;
+  color: #663012;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+/* index/about/works 共通フッター */
+/* Footer Contact */
+footer {
+  margin-top: 150px;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+.footer-left, .footer-right {
+  width: 15%;
+}
+.button-contact {
+  width: 250px;
+}
+.footer-button {
+  text-align: center;
+}
+
+/* コピーライト */
+#copyright-section {
+  text-align: center;
+  line-height: 60px;
+  bottom: 0;
+  background: #C29545;
+  color: #663012;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/*====================
+  タブレット用のスタイル
+====================*/
+@media screen and (min-width: 768px) and (max-width: 959px){
+  /*============
+    index.html
+  ============*/
+  /* メインビジュアル */
+  /* 背景★ */
+  div.main-visual {
+    height: 950px;
+  }
+  div.main-visual-img {
+    height: 100vh;
+  }
+}
+
+
+/*====================
+ スマートフォン用のスタイル
+====================*/
+@media screen and (max-width: 767px){
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  /* スマホ用ナビゲーション */
+  /* 背景色調整 */
+  header {
+    opacity: 0.95;
+  }
+
+  /* ヘッダーとハンバーガーメニュー */
+  #header-sp {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+  }
+  #header-sp img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 13px 5px 10px 0;
+  }
+
+  /* 表示切替 */
+  #nav-sp {
+    background-color: #F2E9E1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+  }
+
+  /* ×ボタン */
+  #burgerclose-sp {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: none;
+  }
+
+  /* ナビゲーションメニュー用ロゴ */
+  #burgerlogo-sp {
+    text-align: right;
+    margin: 100px 20px 40px 0;
+  }
+  #burgerlogo-sp > img {
+    width: 70%;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-sp nav li {
+    list-style: none;
+  }
+  #nav-sp nav a {
+    display: block;
+  }
+  .menu {
+    text-decoration: none;
+    margin: 0 40px 0 20px;
+    height: 60px;
+    text-align: right;
+  }
+
+  /*============
+    index.html
+  ============*/
+  /* メインビジュアル */
+  /* 背景★ */
+  div.main-visual {
+    height: 580px;
+  }
+  div.main-visual-img {
+    height: 100vh;
+  }
+
+  /* コンセプト */
+  /* レイアウトとサイズ調整 */
+  .top-concept {
+    top: 100px;
+  }
+  .concept-frame {
+    left: 4.0vw;
+  }
+  .concept-frame > .concept-img {
+    width: 48.0vw;
+  }
+
+   /* 装飾右 */
+  .parts-right {
+    right: 8.0vw;
+    top: 23.0vh;
+  }
+  .parts-right > .parts-right-img {
+    width: 35%;
+  }
+
+  /* 装飾左 */
+  .parts-left {
+    top: 75.0vw;
+  }
+  .parts-left > .parts-left-img {
+    width: 35%;
+  }
+
+  /* About cup */
+  /* レイアウトとサイズ調整 */
+  .about-cup-img {
+    top: 40%;
+    width: 45.0vw;
+  }
+
+  /* pot */
+  /* レイアウトとサイズ調整 */
+  .top-pot {
+    top: 60%;
+    z-index: 100;
+  }
+  .pot-frame {
+    left: 5.0vw;
+  }
+  .pot-frame > .pot-img {
+    width: 55.0vw;
+  }
+
+
+  /* メインコンテンツ */
+  /* 各タイトルの共通書式・レイアウト */
+  .title-index h1 {
+    font-size: 30px;
+    padding-top: 80px;
+    margin-top: 50px;
+  }
+  .title-index-img {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  /* Works_カルーセル★ */
+  /* 全体のレイアウト */
+  .works-carousel-img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  /* テキスト設定★ */
+  .works-carousel1, .works-carousel2, .works-carousel3 {
+    position: relative;
+  }
+  .works-carousel1 > p, .works-carousel2 > p, .works-carousel3 > p {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-size: 1.3vw;
+    line-height: 150%;
+  }
+  .works-carousel1 > h1, .works-carousel2 > h1, .works-carousel3 > h1 {
+    position: absolute;
+    top: 86%;
+    left: 20%;
+    font-size: 1.3vw;
+    line-height: 150%;
+    font-weight: bold;
+  }
+
+  /* Moreボタン★ */
+  /* .works-more {
+    text-align: center;
+    padding: 50px 0 100px 0;
+  }
+  .works-button-img {
+    width: 150px;
+  } */
+
+  /* Skill */
+  /* 全体のレイアウト */
+  #content-skill {
+    grid-template-columns: repeat(1, 70.0vw);
+    gap: 8vw 0;
+  }
+  
+  /* テキスト設定 */
+  .skill-frame1 > h1, .skill-frame2 > h1, .skill-frame3 > h1 {
+    width: 80%;
+    top: 30%;
+    font-size: 5.0vw;
+  }
+  .skill-frame1 > p, .skill-frame2 > p, .skill-frame3 > p {
+    width: 80%;
+    top: 65%;
+    font-size: 4.0vw;
+  }
+
+  /* Aboutページ */
+  /* タイトル */
+  .title-left {
+    margin-bottom: 4.0vh;
+  }
+
+  .title-left > .title-left-img {
+    width: 70%;
+  }
+
+  /* PC用Aboutを非表示 */ 
+  .about-back-img-pc {
+    display: none;
+  }
+
+  /* About me 背景 */
+  .about-back-img-sp {
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+
+  /* About me アイコン */
+  .about-icon-img {
+    width: 40%;
+    top: 6%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  /* About me テキスト */
+  .about-text {
+    position: absolute;
+    width: 70%;
+    top: 26%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  .about-text-watashi > h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+  .about-text-watashi > p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .br-pc {
+    display: none;
+  }
+  .about-span {
+    font-size: 18px;
+  }
+  
+  /* About me ツールイメージ */
+  .about-tool-img {
+    width: 8%;
+  }
+
+
+  /* Career */
+  /* 全体のレイアウト */
+  .career-frame-img {
+    width: 90%;
+    padding-bottom: 200px;
+  }
+  .career-main {
+    width: 90%;
+    padding-bottom: 20px;
+    margin: 20% auto 0 auto;
+  }
+  .career-main ul {
+    grid-template-columns: repeat(2, 40.0vw);
+    gap: 0px 13px;
+  }
+
+  /* アイテムhover時のテキスト共通設定 */
+  .career-text h1 {
+    font-size: 14px;
+  }
+  .career-text p {
+    font-size: 13px;
+    line-height: 120%;
+  }
+
+  /* PC用アイテム非表示 */
+  .career-item8 {
+    display: none;
+  }
+
+ 
+  /* Favorite */
+  /* 全体のレイアウト */
+  .favorite-frame {
+    margin-top: 250px;
+    padding-bottom: 400px;
+  }
+  .favorite-frame-img {
+    width: 90%;
+  }
+  .favorite-main {
+    width: 90%;
+    padding-bottom: 20px;
+    margin: 20% auto 0 auto;
+  }
+  .favorite-main ul {
+    grid-template-columns: repeat(2, 40.0vw);
+    gap: 0px 13px;
+  }
+
+  /* アイテムhover時のテキスト共通設定 */
+  .favorite-text h1 {
+    font-size: 14px;
+  }
+  .favorite-text p {
+    font-size: 13px;
+    line-height: 120%;
+  }
+
+  /* PC用アイテム非表示 */
+  .favorite-item8 {
+    display: none;
+  }
+
+
+  /* Worksページ★ */
+  .works-box {
+    display: block;
+  }
+  .works-box + .works-box {
+    margin-top: 60px;
+  }
+  .works-text {
+    width: 100%;
+    padding: 0;
+  }
+  .works-frame {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+
+  /*============
+    contact.html
+  ============*/
+  /* フォーム全体のレイアウト */
+  form {
+    width: 85%;
+    padding: 10px 30px 0px 30px;
+    margin-bottom: 0;
+  }
+
+  /* 問い合わせ項目 */
+  .contact-heading {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .company, .fullname, .furigana, .emailaddress, .telephonenumber, .inquirydetails {
+    display: block;
+  }
+
+  /* 必須マーク */
+  .contact-span {
+    vertical-align: baseline;
+  }
+
+  /* お問い合わせ内容のテキストエリア */
+  .contact-textarea {
+    height: 300px;
+  }
+
+  /* 送信ボタン */
+  .contact-input > input {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  /* contact用フッター/コピーライト */
+  #copyright-contact-section {
+    font-size: 2.8vw;
+    font-weight: bold;
+    z-index: 100;
+  }
+
+  /* index/about/works 共通フッター */
+  /* Footer Contact */
+  .footer-left, .footer-right {
+    width: 60%;
+  }
+  .button-contact {
+    width: 50%
+  }
+
+  /* コピーライト */
+  #copyright-section {
+  font-size: 2.8vw;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

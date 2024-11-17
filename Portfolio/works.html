@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Watashi Portfolio【SAKURACHAI WebDesign】</title>
+  <meta charset="utf-8">
+  <meta name="Watashi Portfolio" content="WatashiのPortfolioサイト（SAKURACHAI WebDesign）">
+
+  <!-- 表示領域の設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 互換を標準モードへ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css_destyle -->
+  <link rel="stylesheet" href="./destyle.css">
+  <!-- flick用 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon --> 
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Portfolio">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+  <header>
+    <!-- ロゴ -->
+    <a href="index.html">
+      <img class="logo-pc-img" src="images/logo.png" alt="トップページへ戻る">
+    </a>
+    
+    <!-- PC用ナビゲーション -->
+    <nav id="nav-pc">
+      <ul>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="index.html#main-contents-section-works">Works</a></li>
+        <li><a href="index.html#main-contents-section-skill">Skill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- スマホ用ヘッダー -->
+    <div id="header-sp">
+      <button id="burgerbutton-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="images/burger_sp.png">
+      </button>
+    </div>
+
+    <!-- スマホ用ナビゲーション/ハンバーガー -->
+    <div id="nav-sp">
+      <button id="burgerclose-sp" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <img src="images/burgerclose_sp.png">
+      </button>
+      <nav>
+        <ul>
+          <li>
+            <a id="burgerlogo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="images/burgerlogo_sp.png"></a>
+          </li>
+          <li><a class="menu" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">About me</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-works" onclick="document.getElementById('nav-sp').style.display = 'none'">Works</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-skill" onclick="document.getElementById('nav-sp').style.display = 'none'">Skill</a></li>
+          <li><a class="menu" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  
+  <main>
+    <!-- タイトル -->
+    <div class="title-left">
+      <img class="title-left-img" src="images/ribbon_works.png">
+    </div>
+
+    <!-- Works -->
+    <section id="works-section">
+
+      <!-- モックアップ -->
+      <div class="works-box">
+        <div class="works-frame">
+          <a href="index.html"><img class="works-img1" src="images/top_works_1.png"></a>  <!-- URL入力★ -->     
+        </div>
+        <div class="works-text">
+          <p>Website スクール課題</p>
+          <h1>コーポレートサイト（架空）</h1>
+          <h2>コンセプト</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>制作期間</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>担当領域</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div>
+
+      <div class="works-box">
+        <div class="works-frame">
+          <a href="index.html"><img class="works-img2" src="images/top_works_2.png"></a>  <!-- URL入力★ -->
+        </div>
+        <div class="works-text">
+          <p>Website 自主制作</p>
+          <h1>パン屋のサービスサイト（架空）</h1>
+          <h2>コンセプト</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>制作期間</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>担当領域</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div>
+
+      <div class="works-box">
+        <div class="works-frame">
+          <a href="index.html"><img class="works-img3" src="images/top_works_3.png"></a>  <!-- URL入力★ -->
+        </div>
+        <div class="works-text">
+          <p>Website 自主制作</p>
+          <h1>ポートフォリオ</h1>
+          <h2>コンセプト</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>制作期間</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <h2>担当領域</h2>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>      
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <!-- Footer Contact -->
+    <section id="footer-contact-section">
+      <div class="footer-contact">
+        <img class="footer-left" src="images/footer_left.png">        
+        <a href="contact.html" class="footer-button">
+          <img class="button-contact" src="images/button_contact.png">
+        </a>
+        <img class="footer-right" src="images/footer_right.png">
+      </div>
+    </section>
+
+    <!-- コピーライト -->
+    <section id="copyright-section">
+      <p class="copyright">&copy;2024 SAKURACHAI WebDesign All Rights reserved.</p>
+    </section>
+  </footer>
+
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Watashi Portfolio【SAKURACHAI WebDesign】</title>
+  <meta charset="utf-8">
+  <meta name="Watashi Portfolio" content="WatashiのPortfolioサイト（SAKURACHAI WebDesign）">
+
+  <!-- 表示領域の設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 互換を標準モードへ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css_destyle -->
+  <link rel="stylesheet" href="./destyle.css">
+  <!-- flick用 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon --> 
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Portfolio">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+  <header>
+    <!-- ロゴ -->
+    <a href="index.html">
+      <img class="logo-pc-img" src="images/logo.png" alt="トップページへ戻る">
+    </a>
+    
+    <!-- PC用ナビゲーション -->
+    <nav id="nav-pc">
+      <ul>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="index.html#main-contents-section-works">Works</a></li>
+        <li><a href="index.html#main-contents-section-skill">Skill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- スマホ用ヘッダー -->
+    <div id="header-sp">
+      <button id="burgerbutton-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="images/burger_sp.png">
+      </button>
+    </div>
+
+    <!-- スマホ用ナビゲーション/ハンバーガー -->
+    <div id="nav-sp">
+      <button id="burgerclose-sp" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <img src="images/burgerclose_sp.png">
+      </button>
+      <nav>
+        <ul>
+          <li>
+            <a id="burgerlogo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="images/burgerlogo_sp.png"></a>
+          </li>
+          <li><a class="menu" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">About me</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-works" onclick="document.getElementById('nav-sp').style.display = 'none'">Works</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-skill" onclick="document.getElementById('nav-sp').style.display = 'none'">Skill</a></li>
+          <li><a class="menu" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  
+  <main>
+    <!-- メインビジュアル -->
+    <section id="main-visual-section">
+      <!-- 背景画像 -->
+      <div class="main-visual">
+        <div class="main-visual-img"></div>
+      </div>
+
+      <!-- タイトル★ -->
+      <!-- <div class="title-right">
+        <img class="title-right-img" src="images/ribbon_top.png">
+      </div> -->
+
+      <!-- コンセプト_缶 -->
+      <div class="top-concept">
+        <div class="concept-frame">
+          <img class="concept-img" src="images/top_concept.png">
+          <!-- <h1>テキスト★</h1>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br class="br-sp"><br>
+          </p> -->
+        </div>
+      </div>
+
+      <!-- parts_右 -->
+      <div class="parts-right">
+        <img class="parts-right-img" src="images/top_cinnamon.png">
+      </div>
+
+      <!-- parts_左 -->
+      <div class="parts-left">
+        <img class="parts-left-img" src="images/top_anise.png">
+      </div>
+
+      <!-- About me_cup -->
+      <div class="top-about">
+        <a href="about.html"><img class="about-cup-img" src="images/top_cup.png"></a>
+      </div>
+
+      <!-- Pot -->
+      <div class="top-pot">
+        <div class="pot-frame">
+          <img class="pot-img" src="images/top_pot.png">
+          <img class="pot-circle-img" src="images/top_circle.png">
+        </div>
+      </div>
+
+      <!-- 波★ -->
+      <!-- <div class="top-wave">
+        <img class="top-wave-image" src="images/wave.png">
+      </div> -->
+      
+    </section>
+
+
+    <!-- メインコンテンツ_Works -->
+    <section id="main-contents-section-works">
+      <!-- タイトル -->
+      <div class="title-index">
+        <h1>Works</h1>
+        <p>制作物</p>
+        <img class="title-index-img" src="images/line_leaf.png">
+      </div>
+
+      <!-- モックアップ・カルーセル★ -->
+      <div class="carousel">
+        <div class="works-carousel1">
+          <a href="works.html" target="_blank" rel="noopener noreferrer">  <!-- URL差し替え★ -->
+            <img class="works-carousel-img" src="images/top_works_1.png">
+          </a>
+          <p>Website スクール課題</p>
+          <h1>コーポレートサイト（架空）</h1>
+        </div>
+        <div class="works-carousel2">
+          <a href="works.html" target="_blank" rel="noopener noreferrer">  <!-- URL差し替え★ -->
+            <img class="works-carousel-img" src="images/top_works_2.png">
+          </a>
+          <p>Website 自主制作</p>
+          <h1>パン屋のサービスサイト（架空）</h1>
+        </div>
+        <div class="works-carousel3">
+          <a href="works.html" target="_blank" rel="noopener noreferrer">  <!-- URL差し替え★ -->
+            <img class="works-carousel-img" src="images/top_works_3.png">
+          </a>
+          <p>Website 自主制作</p>
+          <h1>ポートフォリオ</h1>
+        </div>
+      </div>
+        
+      <!-- Moreボタン★ -->
+      <!-- <div class="works-more">
+        <a href="works.html" class="works-button">
+          <img class="works-button-img"  src="images/button_more.png">
+        </a>
+      </div> -->
+    </section>
+
+
+    <!-- メインコンテンツ_Skill -->
+    <section id="main-contents-section-skill">
+      <!-- タイトル -->
+      <div class="title-index">
+        <h1>Skill</h1>
+        <p>できること/強み</p>
+        <img class="title-index-img" src="images/line_leaf.png">
+      </div>
+
+      <!-- Skillアイテム -->
+      <div id="content-skill">
+        <div class="skill-frame1">
+          <img class="skill-frame-img" src="images/top_skill_1.png">
+          <h1>論理的思考/<br>問題解決能力</h1>
+          <p>洞察力と経験を武器に、問題を論理的・客観的に分析して解決策を導き出します。<br>長期的な視点で物事を捉え、データに基づいて情報を整理し、適切なアウトプットを<br>行います。<br>
+          </p>
+        </div>
+        <div class="skill-frame2">
+          <img class="skill-frame-img" src="images/top_skill_2.png">
+          <h1>探究心が強い/<br>好奇心旺盛</h1>
+          <p>興味がある物事について深く追求する事や、他の方の意見やお話しを伺って新しい考え方に触れる事が好きです。<br>また、自分のやりたい事は情熱を持って計画的に最後までやり遂げます。<br>
+          </p>
+        </div>
+        <div class="skill-frame3">
+          <img class="skill-frame-img" src="images/top_skill_3.png">
+          <h1>独創性/<br>こだわり</h1>
+          <p>常識に囚われず、新しいアイデアの追加や機能性の最適化・効率化を図ります。自分らしさやこだわりを持ちつつも、ユーザーファーストを忘れずに目的を達成することに向かって最大限努力します。<br>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <!-- Footer Contact -->
+    <section id="footer-contact-section">
+      <div class="footer-contact">
+        <img class="footer-left" src="images/footer_left.png">        
+        <a href="contact.html" class="footer-button">
+          <img class="button-contact" src="images/button_contact.png">
+        </a>
+        <img class="footer-right" src="images/footer_right.png">
+      </div>
+    </section>
+
+    <!-- コピーライト -->
+    <section id="copyright-section">
+      <p class="copyright">&copy;2024 SAKURACHAI WebDesign All Rights reserved.</p>
+    </section>
+
+  </footer>
+
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

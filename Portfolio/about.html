@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Watashi Portfolio【SAKURACHAI WebDesign】</title>
+  <meta charset="utf-8">
+  <meta name="Watashi Portfolio" content="WatashiのPortfolioサイト（SAKURACHAI WebDesign）">
+
+  <!-- 表示領域の設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 互換を標準モードへ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- css_destyle -->
+  <link rel="stylesheet" href="./destyle.css">
+  <!-- flick用 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon --> 
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Portfolio">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+  <header>
+    <!-- ロゴ -->
+    <a href="index.html">
+      <img class="logo-pc-img" src="images/logo.png" alt="トップページへ戻る">
+    </a>
+    
+    <!-- PC用ナビゲーション -->
+    <nav id="nav-pc">
+      <ul>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="index.html#main-contents-section-works">Works</a></li>
+        <li><a href="index.html#main-contents-section-skill">Skill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- スマホ用ヘッダー -->
+    <div id="header-sp">
+      <button id="burgerbutton-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="images/burger_sp.png">
+      </button>
+    </div>
+
+    <!-- スマホ用ナビゲーション/ハンバーガー -->
+    <div id="nav-sp">
+      <button id="burgerclose-sp" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <img src="images/burgerclose_sp.png">
+      </button>
+      <nav>
+        <ul>
+          <li>
+            <a id="burgerlogo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="images/burgerlogo_sp.png"></a>
+          </li>
+          <li><a class="menu" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">About me</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-works" onclick="document.getElementById('nav-sp').style.display = 'none'">Works</a></li>
+          <li><a class="menu" href="index.html#main-contents-section-skill" onclick="document.getElementById('nav-sp').style.display = 'none'">Skill</a></li>
+          <li><a class="menu" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  
+  <main>
+    <!-- タイトル -->
+    <div class="title-left">
+      <img class="title-left-img" src="images/ribbon_about.png">
+    </div>
+
+    <!-- About me -->
+    <section id="about-section">
+      
+      <!-- PC用イメージ -->
+      <img class="about-back-img-pc" src="images/about_frame.png">
+      
+      <!-- スマホ用イメージ -->
+      <img class="about-back-img-sp" src="images/about_frame_sp.png">
+      
+      <!-- PC/スマホ共通 -->
+      <img class="about-icon-img" src="images/about_icon.png">
+      <div class="about-text">
+        <div class="about-text-watashi">
+          <h1>Watashi</h1>
+          <p>何事も挑戦と経験が大事！という気持ちと好奇心から、今まで<br class="br-pc">興味を持った職を様々経験。現職でノーコードのポータルサイト作成や、組織の一元管理ページ作成などに携わる中で、その面白さに惹かれWebサイト制作へ興味を持つ。<br class="br-pc">もっと専門的な知識を得てキャリアアップしたい！と一念発起し、スクールでWebデザインを学ぶ。<br>
+          <br><span class="about-span">キャリアビジョン</span>
+          <br>短期：<br>求められるものや自分が望むものを自在に具現化できるWebデザイナーを目指す。<br>
+          <br>長期：<br>自分が活躍したい分野･得意な分野を見定め、3年以内になりたいポジションへのキャリアアップを目指す。<br>
+          <br><span class="about-span">使える言語・ツール</span></p><br>         
+          <div class="about-tool">
+            <img class="about-tool-img" src="images/logo-html.png" alt="html">
+            <img class="about-tool-img" src="images/logo-css.png" alt="css">
+            <img class="about-tool-img" src="images/logo-javascript.png" alt="javascript">
+            <img class="about-tool-img" src="images/logo-jquery.png" alt="jquery">
+            <img class="about-tool-img" src="images/logo-wordpress.png" alt="wordpress">
+            <img class="about-tool-img" src="images/logo-photoshop.png" alt="photoshop">
+            <img class="about-tool-img" src="images/logo-figma.png" alt="figma">
+          </div>
+        </div>
+      </div>   
+          
+    </section>
+
+    <!-- Career -->
+    <section id="career-section">
+      <div class="career-frame">
+        <img class="career-frame-img" src="images/about_advent_career.png">
+
+        <!-- Careerアイテム -->
+        <div class="career-main">
+          <ul>
+            <li>
+              <div class="career-item1">
+                <img src="images/career1.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>文具･玩具販売(百貨店)</h1>
+                    <p>商品の発注･陳列･販売、お客様からのお問い合わせ対応、棚卸しなど。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item2">
+                <img src="images/career2.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>CD･チケット販売</h1>
+                    <p>チケット授受･発券、CD予約受付、販売、イベントサポートなど。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item3">
+                <img src="images/career3.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>TV･携帯電話の製造</h1>
+                    <p>電子機器の組み立て、検査。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item4">
+                <img src="images/career4.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>ケーキ販売(百貨店)</h1>
+                    <p>食品運搬･販売･予約受付、消耗品発注、お客様からのお問い合わせ対応など。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item5">
+                <img src="images/career5.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>カスタマーサポート</h1>
+                    <p>コールセンターのOP･SV、メールサポート、クライアントへの報告書作成、委託先企業への見積もり･請求書作成アシスタント、研修対応など。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item6">
+                <img src="images/career6.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>リソースマネジメント･ナレッジマネジメント</h1>
+                    <p>WFM研修対応、シフト作成、勤怠管理･分析、社内ナレッジ集約･ポータルページ作成など。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="career-item7">
+                <img src="images/career7.png">
+                <div class="career-hover">
+                  <div class="career-text">
+                    <h1>コーポレート</h1>
+                    <p>新卒･中途採用サポート、リファラル推進、入社手続き、経費精算、社内システムの移管サポート、委託先企業との価値創出PJなど。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- PC用 -->
+            <li class="career-item8">
+              <div>
+                <img src="images/about_advent1.png">
+              </div>
+            </li>
+
+            <!-- PC/スマホ用 -->
+            <li>
+              <div class="career-item9">
+                <img src="images/about_advent2.png">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorite -->
+    <section id="favorite-section">
+      <div class="favorite-frame">
+        <img class="favorite-frame-img" src="images/about_advent_favorite.png">
+
+        <!-- Favoriteアイテム -->
+        <div class="favorite-main">
+          <ul>
+            <li>
+              <div class="favorite-item1">
+                <img src="images/favorite1.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>音楽</h1>
+                    <p>AirPodsは生活必需品。<br>アイドル、V系、ロック、VTuber、クラシックなどジャンル問わず聴きます。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item2">
+                <img src="images/favorite2.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>ゲーム</h1>
+                    <p>原神、Detroit、未解決事件は終わらせないといけないから、ペルソナ、あつ森など。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item3">
+                <img src="images/favorite3.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>猫</h1>
+                    <p>動物の中でも特に好き。<br>20年で旅立った我が子が世界一好きです。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item4">
+                <img src="images/favorite4.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>YouTube</h1>
+                    <p>推し、にじさんじ、片付け･収納の動画など。鳥羽水族館のラッコ水槽ライブに癒やされています。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item5">
+                <img src="images/favorite5.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>色</h1>
+                    <p>ピンク、ボルドー、アイボリー、深みのあるターコイズブルー。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item6">
+                <img src="images/favorite6.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>食べ物･飲み物</h1>
+                    <p>クロワッサン、桜餅、杏仁豆腐、黒こしょうせんべい、チャイなど。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="favorite-item7">
+                <img src="images/favorite7.png">
+                <div class="favorite-hover">
+                  <div class="favorite-text">
+                    <h1>花</h1>
+                    <p>桜、ヒマワリ、梅、ガーベラ、カスミソウ。<br class="br-sp">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- PC用 -->
+            <li class="favorite-item8">
+              <div>
+                <img src="images/about_advent1.png">
+              </div>
+            </li>
+
+            <!-- PC/スマホ用 -->
+            <li>
+              <div class="favorite-item9">
+                <img src="images/about_advent2.png">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <!-- Footer Contact -->
+    <section id="footer-contact-section">
+      <div class="footer-contact">
+        <img class="footer-left" src="images/footer_left.png">        
+        <a href="contact.html" class="footer-button">
+          <img class="button-contact" src="images/button_contact.png">
+        </a>
+        <img class="footer-right" src="images/footer_right.png">
+      </div>
+    </section>
+
+    <!-- コピーライト -->
+    <section id="copyright-section">
+      <p class="copyright">&copy;2024 SAKURACHAI WebDesign All Rights reserved.</p>
+    </section>
+  </footer>
+
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
